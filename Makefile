@@ -25,6 +25,5 @@ ut:
 bench:
 	go test $(PKGLIST) -run=NOTEST -bench=. -cpu=1,2,4,8
 
-.PHONY: clean
 clean:
-	rm -fr $(NAME)
+	rm -rf ./output
