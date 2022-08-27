@@ -1,7 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/Dup4/starter-go-binary/version"
+)
 
 func main() {
-	fmt.Println("Hello world!")
+	fmt.Println(version.ToString())
 }
