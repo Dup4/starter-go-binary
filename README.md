@@ -1,3 +1,3 @@
-<img align="right" src="./assets/go.png">
+<img align="right" width="96" src="./assets/go.png">
 
 # starter-go
