@@ -17,13 +17,13 @@ all:
 
 test:
 	go vet $(PKGLIST)
-	go test $(PKGLIST) -race -coverprofile=unittest-coverage.out
+	go test $(PKGLIST) -race -coverprofile=./unittest-coverage.out
 
 ut:
-	go test $(PKGLIST) -race -coverprofile=unittest-coverage.out
+	go test $(PKGLIST) -race -coverprofile=./unittest-coverage.out
 
 bench:
-	go test $(PKGLIST) -run=NOTEST -bench=. -cpu=1,2,4,8
+	go test $(PKGLIST) -run=NOTEST -benchmem -bench=. -cpu=1,2,4,8
 
 clean:
 	rm -rf ./output
