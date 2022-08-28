@@ -12,8 +12,13 @@ LDFLAGS="\
 -X github.com/Dup4/starter-go-binary/version.BUILD_REPO_BRANCH=$(BUILD_REPO_BRANCH) \
 "
 
-all:
-	go build -ldflags $(LDFLAGS)  -o output/$(NAME) *.go
+all: build
+
+build:
+	go build -ldflags $(LDFLAGS) -o output/$(NAME) $(NAME).go
+
+install:
+	go install -ldflags $(LDFLAGS) $(NAME).go
 
 test:
 	go vet $(PKGLIST)
