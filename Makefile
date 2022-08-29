@@ -1,5 +1,5 @@
 SHELL = /bin/bash
-NAME = starter-go-binary
+NAME ?= starter-go-binary
 
 PKGLIST=$(shell go list ./...)
 BUILD_GIT_TAG=$(shell git describe --tags --abbrev=0 || echo "TagNotFound")
