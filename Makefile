@@ -15,10 +15,10 @@ LDFLAGS="\
 all: build
 
 build:
-	go build -ldflags $(LDFLAGS) -o output/$(NAME) $(NAME).go
+	go build -ldflags $(LDFLAGS) -o output/
 
 install:
-	go install -ldflags $(LDFLAGS) $(NAME).go
+	go install -ldflags $(LDFLAGS)
 
 test:
 	go vet $(PKGLIST)
